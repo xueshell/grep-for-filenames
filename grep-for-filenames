@@ -1,5 +1,4 @@
-#!/bin/sh
-# TODO Look for more interesting interpreter directives here: https://en.wikipedia.org/wiki/Shebang_(Unix)
+#!/bin/bash
 
 # TODO Accept a directory name and call a function that returns a flattened list of files from that directory
 
