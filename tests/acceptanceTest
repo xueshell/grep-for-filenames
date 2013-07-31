@@ -3,7 +3,7 @@
 source ../functions
 
 function testFlatListFiles() {
-    assertEquals 1 "`flatListFiles .`"
+    assertEquals 1 "`flatListFilesFrom .`"
 }
 
 . ./shunit2-2.1.6/src/shunit2
