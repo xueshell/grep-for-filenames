@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function testItWorks() {
+    assertEquals "It works!" "It works!"
+}
+
+function testEchoesHelloBash() {
+    assertEquals "Hello Bash!" "`../grep-for-filenames`"
+}
+
+. ./shunit2-2.1.6/src/shunit2
