@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../functions
+. ../functions
 
 function testFlatListFiles() {
     flatListFilesFrom ./data/dirExample > flatListOut

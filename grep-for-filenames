@@ -1,10 +1,11 @@
 #!/bin/bash
 
-source ./functions
+. ./functions
 
-flatListFilesFrom $1
+PATTERN=`flatListFilesFrom $1`
+
 # TODO Call fgrep with the list previously created and another direcory name
 # and print a list of filenames that were not found in the files contained in
 # the directory, recursively
 
-echo Hello Bash!
+echo "$PATTERN"
