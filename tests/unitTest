@@ -8,7 +8,7 @@ function testFlatListFiles() {
     assertTrue 'Expected output differs.' $?
 }
 
-function testPrintNotFoundPattern() {
+function testPrintsNotFoundPattern() {
     pattern=file1.txt
     dir=./data/testFindNotMatchedPatternSubset
     actual=`findNotMatchedPatternSubset $pattern $dir`
@@ -20,6 +20,13 @@ function testFindNotMatchedPatternSubset() {
     dir=./data/testFindNotMatchedPatternSubset
     actual=`findNotMatchedPatternSubset "$pattern" $dir`
     assertEquals $'file1.txt\nfile3.png' "$actual"
+}
+
+function testFoundAllPatternsRecursive() {
+    pattern=$'file1.txt\nfile2.jpg\nfile3.png'
+    dir=./data/testFoundAllPatternsRecursive
+    actual=`findNotMatchedPatternSubset "$pattern" $dir`
+    assertEquals '' "$actual"
 }
 
 . ./shunit2-2.1.6/src/shunit2
