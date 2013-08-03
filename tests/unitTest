@@ -11,7 +11,7 @@ function testFlatListFiles() {
 function testPrintNotFoundPattern() {
     pattern=file1.txt
     dir=./data/testFindNotMatchedPatternSubset
-    actual=`findNotMatchedPatternSubset "$pattern" $dir`
+    actual=`findNotMatchedPatternSubset $pattern $dir`
     assertEquals file1.txt $actual
 }
 
@@ -19,7 +19,7 @@ function testFindNotMatchedPatternSubset() {
     pattern=$'file1.txt\nfile2.jpg\nfile3.png'
     dir=./data/testFindNotMatchedPatternSubset
     actual=`findNotMatchedPatternSubset "$pattern" $dir`
-    assertEquals file1.txt $actual
+    assertEquals $'file1.txt\nfile3.png' "$actual"
 }
 
 . ./shunit2-2.1.6/src/shunit2
