@@ -3,8 +3,8 @@
 source ../functions
 
 function testFlatListFiles() {
-    flatListFilesFrom ./data/dirExample > flatList
-    diff flatList ./data/flatListExample
+    flatListFilesFrom ./data/dirExample > flatListOut
+    diff flatListOut ./data/flatListExample
     assertTrue 'Expected output differs.' $?
 }
 
