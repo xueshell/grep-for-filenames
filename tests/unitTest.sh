@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../functions
+. ../functions.sh
 
 function testFlatListFiles() {
     flatList=`flatListFilesFrom ./data/unitTest/testFlatListFiles/dirExample`

@@ -6,7 +6,7 @@ function testFound3Of5Recursive() {
     filenames=$basedir/filenames
     references=$basedir/references
     expected=$'file3.png\nfile4.xml\nfile5.flac'
-    actual=`./grep-for-filenames $filenames $references`
+    actual=`./grepForFilenames.sh $filenames $references`
     assertEquals "$expected" "$actual"
 }
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./functions
+. ./functions.sh
 
 pattern=`flatListFilesFrom $1`
 findNotMatchedPatternSubset "$pattern" $2

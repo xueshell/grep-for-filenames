@@ -20,8 +20,8 @@ function testLoopingThroughStringWithNLChars() {
 
 function testCanBrowseToTheMain() {
     cd ..
-    expected='./grep-for-filenames'
-    actual=`find -name grep-for-filenames`
+    expected='./grepForFilenames.sh'
+    actual=`find -name grepForFilenames.sh`
     assertEquals $expected $actual
 }
 
