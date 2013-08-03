@@ -3,28 +3,28 @@
 . ../functions
 
 function testFlatListFiles() {
-    flatListFilesFrom ./data/testFlatListFiles/dirExample > flatListOut
-    diff flatListOut ./data/testFlatListFiles/flatListExample
+    flatListFilesFrom ./data/unitTest/testFlatListFiles/dirExample > flatListOut
+    diff flatListOut ./data/unitTest/testFlatListFiles/flatListExample
     assertTrue 'Expected output differs.' $?
 }
 
 function testPrintsNotFoundPattern() {
     pattern=file1.txt
-    dir=./data/testFindNotMatchedPatternSubset
+    dir=./data/unitTest/testFindNotMatchedPatternSubset
     actual=`findNotMatchedPatternSubset $pattern $dir`
     assertEquals file1.txt $actual
 }
 
 function testFindNotMatchedPatternSubset() {
     pattern=$'file1.txt\nfile2.jpg\nfile3.png'
-    dir=./data/testFindNotMatchedPatternSubset
+    dir=./data/unitTest/testFindNotMatchedPatternSubset
     actual=`findNotMatchedPatternSubset "$pattern" $dir`
     assertEquals $'file1.txt\nfile3.png' "$actual"
 }
 
 function testFoundAllPatternsRecursive() {
     pattern=$'file1.txt\nfile2.jpg\nfile3.png'
-    dir=./data/testFoundAllPatternsRecursive
+    dir=./data/unitTest/testFoundAllPatternsRecursive
     actual=`findNotMatchedPatternSubset "$pattern" $dir`
     assertEquals '' "$actual"
 }
