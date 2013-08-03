@@ -3,8 +3,8 @@
 . ../functions
 
 function testFlatListFiles() {
-    flatListFilesFrom ./data/unitTest/testFlatListFiles/dirExample > flatListOut
-    diff flatListOut ./data/unitTest/testFlatListFiles/flatListExample
+    flatList=`flatListFilesFrom ./data/unitTest/testFlatListFiles/dirExample`
+    diff <(echo "$flatList") ./data/unitTest/testFlatListFiles/flatListExample
     assertTrue 'Expected output differs.' $?
 }
 
