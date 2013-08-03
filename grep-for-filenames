@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# TODO Accept a directory name and call a function that returns a flattened list of files from that directory
+source ./functions
 
+flatListFilesFrom $1
 # TODO Call fgrep with the list previously created and another direcory name
 # and print a list of filenames that were not found in the files contained in
 # the directory, recursively

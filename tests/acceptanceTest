@@ -3,7 +3,9 @@
 source ../functions
 
 function testFlatListFiles() {
-    assertEquals 1 "`flatListFilesFrom .`"
+    flatListFilesFrom ./data/dirExample > flatList
+    diff flatList ./data/flatListExample
+    assertTrue 'Expected output differs.' $?
 }
 
 . ./shunit2-2.1.6/src/shunit2
