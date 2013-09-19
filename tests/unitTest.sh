@@ -17,21 +17,21 @@ function testListFilesFrom() {
 function testPrintsNotFoundPattern() {
     pattern=file1.txt
     dir=./data/unitTest/testFindNotMatchedPatternSubset
-    actual=`findNotMatchedPatternSubset $pattern $dir`
+    actual=`listNotFoundByBasename $pattern $dir`
     assertEquals file1.txt $actual
 }
 
 function testFindNotMatchedPatternSubset() {
     pattern=$'file1.txt\nfile2.jpg\nfile3.png'
     dir=./data/unitTest/testFindNotMatchedPatternSubset
-    actual=`findNotMatchedPatternSubset "$pattern" $dir`
+    actual=`listNotFoundByBasename "$pattern" $dir`
     assertEquals $'file1.txt\nfile3.png' "$actual"
 }
 
 function testFoundAllPatternsRecursive() {
     pattern=$'file1.txt\nfile2.jpg\nfile3.png'
     dir=./data/unitTest/testFoundAllPatternsRecursive
-    actual=`findNotMatchedPatternSubset "$pattern" $dir`
+    actual=`listNotFoundByBasename "$pattern" $dir`
     assertEquals '' "$actual"
 }
 

@@ -2,5 +2,5 @@
 
 . ./functions.sh
 
-pattern=`flatListFilesFrom $1`
-findNotMatchedPatternSubset "$pattern" $2
+pattern=`listFilesFrom $1`
+listNotFoundByBasename "$pattern" $2

@@ -5,7 +5,11 @@ function testFound3Of5Recursive() {
     basedir=./tests/data/acceptanceTest/testFound3Of5Recursive
     filenames=$basedir/filenames
     references=$basedir/references
-    expected=$'file3.png\nfile4.xml\nfile5.flac'
+    read -d '' expected <<-____EOF
+	$filenames/nonemptyDir/file3.png
+	$filenames/nonemptyDir/file4.xml
+	$filenames/file5.flac
+____EOF
     actual=`./grepForFilenames.sh $filenames $references`
     assertEquals "$expected" "$actual"
 }
