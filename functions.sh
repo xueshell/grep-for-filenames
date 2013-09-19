@@ -11,10 +11,7 @@ function listFilesFrom() {
 function findNotMatchedPatternSubset() {
     for line in $1
     do
-        output=`grep -r $line $2`
-        if [ $? -ne 0 ]
-        then
-            echo $line
-        fi
+        grep -r $line $2 > /dev/null
+        [ $? -eq 1 ] && echo $line
     done
 }
