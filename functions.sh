@@ -12,7 +12,7 @@ function findNotMatchedPatternSubset() {
     for line in $1
     do
         output=`grep -r $line $2`
-        if [ "$output" == '' ]
+        if [ $? -ne 0 ]
         then
             echo $line
         fi
