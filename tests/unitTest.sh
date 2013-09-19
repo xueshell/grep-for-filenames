@@ -8,6 +8,12 @@ function testFlatListFiles() {
     assertTrue 'Expected output differs.' $?
 }
 
+function testListFilesFrom() {
+    list=`listFilesFrom ./data/unitTest/testFlatListFiles/dirExample`
+    diff <(echo "$list") ./data/unitTest/testListFilesFrom/listExample
+    assertTrue 'Expected output differs.' $?
+}
+
 function testPrintsNotFoundPattern() {
     pattern=file1.txt
     dir=./data/unitTest/testFindNotMatchedPatternSubset

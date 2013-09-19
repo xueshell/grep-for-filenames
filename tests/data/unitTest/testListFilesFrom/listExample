@@ -1,0 +1,4 @@
+./data/unitTest/testFlatListFiles/dirExample/textFileExample.txt
+./data/unitTest/testFlatListFiles/dirExample/nonemptyDirExample/nonemptyDirExample2/pngFileExample.png
+./data/unitTest/testFlatListFiles/dirExample/nonemptyDirExample/nonemptyDirExample2/xmlFileExample.xml
+./data/unitTest/testFlatListFiles/dirExample/nonemptyDirExample/jpgFileExample.jpg
