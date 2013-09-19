@@ -4,5 +4,5 @@
 
 . ./functions.sh
 
-pattern=`listFilesFrom $1`
-listNotFoundByBasename "$pattern" $2
+filesList=`listFilesFrom $1`
+listNotFoundByBasename "$filesList" $2
