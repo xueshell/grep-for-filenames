@@ -1,6 +1,6 @@
 == grep-for-filenames ==
 
-A bash script to search for filenames from a directory, flattened, not referenced in text files of another directory. Prints the list of filenames. Searches are recursive in both directories.
+A bash script to list filenames from a directory whose basenames are not referenced in text files of another directory. Searches are recursive in both directories.
 
 === Usage ===
 
